@@ -103,13 +103,13 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking_btn" class="btn-style">Book Now</button>
         </div>
     </main>
 
     <!--Thank You-->
     <script>
-
+        // function for ticket price and amount
         function ticketAmountChange(type, isIncrease){
             const currentTicketNumber = getInputValue(type);
             let newTicketNumber = currentTicketNumber;
@@ -151,7 +151,10 @@
             const totalTicketNumber = parseInt(totalTicket);
             return totalTicketNumber;
         }
-
+        // function for book now button
+        document.getElementById('booking_btn').addEventListener('click', function(){
+            alert('You have successfully booked your ticket!');
+        })
     </script>
 </body>
 
